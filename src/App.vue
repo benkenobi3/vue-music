@@ -1,28 +1,69 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-container fluid>
+      <b-navbar toggleable="lg" type="dark">
+        
+        <b-navbar-brand href="#">
+          Лого
+        </b-navbar-brand>
+
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-collapse" is-nav>
+
+          <b-navbar-nav class="ml-auto" justify-content="center" align-v="center">
+
+            <b-nav-item>
+              <h5>Главная</h5>
+            </b-nav-item>
+
+            <b-nav-item>
+              / .. /
+            </b-nav-item>
+
+            <b-nav-item>
+              / .. /
+            </b-nav-item>
+
+          </b-navbar-nav>
+
+          <b-navbar-nav class="mr-auto">
+            <b-nav-item>
+              <b-button pill variant="outline-light">Поиск</b-button>
+            </b-nav-item>
+          </b-navbar-nav>
+          
+          <b-navbar-nav style="width: 56px;">
+            <p></p>
+          </b-navbar-nav>
+
+        </b-collapse>
+
+      </b-navbar>
+
+      <b-row class="content">
+        <p>Контентище</p>
+      </b-row>
+
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app'
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  * {
+    color: white;
+  }
+
+  b-navbar {
+    max-height: 56px;
+    min-height: 56px;
+  }
+
 </style>

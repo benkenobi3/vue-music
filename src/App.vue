@@ -14,15 +14,21 @@
           <b-navbar-nav class="ml-auto" justify-content="center" align-v="center">
 
             <b-nav-item>
-              <h5>Главная</h5>
+              <router-link to="/">
+                Главная
+              </router-link>
             </b-nav-item>
 
             <b-nav-item>
-              / .. /
+              <router-link to="/hotlist">
+                Хотлист
+              </router-link>
             </b-nav-item>
 
             <b-nav-item>
-              / .. /
+              <router-link to="/library">
+                Библиотека
+              </router-link>
             </b-nav-item>
 
           </b-navbar-nav>

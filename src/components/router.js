@@ -9,7 +9,7 @@ import Library from './pages/Library'
 
 const routes = [
     {
-      path: '',
+      path: '/',
       name: 'Главная',
       component: Main
     },
@@ -26,5 +26,6 @@ const routes = [
 ]
   
 export default new Router({
+    mode: 'history',
     routes
 })

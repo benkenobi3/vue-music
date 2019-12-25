@@ -13,19 +13,19 @@
 
           <b-navbar-nav class="ml-auto" justify-content="center" align-v="center">
 
-            <b-nav-item>
+            <b-nav-item active class="mr-4">
               <router-link to="/">
                 Главная
               </router-link>
             </b-nav-item>
 
-            <b-nav-item>
+            <b-nav-item class="mr-4">
               <router-link to="/hotlist">
                 Хотлист
               </router-link>
             </b-nav-item>
 
-            <b-nav-item>
+            <b-nav-item class="mr-4">
               <router-link to="/library">
                 Библиотека
               </router-link>
@@ -40,7 +40,7 @@
           </b-navbar-nav>
           
           <b-navbar-nav style="width: 56px;">
-            <p></p>
+            <p>ACC</p>
           </b-navbar-nav>
 
         </b-collapse>
@@ -48,7 +48,7 @@
       </b-navbar>
 
       <b-row class="content">
-        <p>Контентище</p>
+        <router-view></router-view>
       </b-row>
 
     </b-container>
@@ -63,13 +63,13 @@
 
 <style>
 
-  * {
-    color: white;
-  }
-
   b-navbar {
     max-height: 56px;
     min-height: 56px;
+  }
+
+  .router-link-exact-active {
+    color: white;
   }
 
 </style>

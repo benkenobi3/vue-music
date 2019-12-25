@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <b-container fluid>
-       
-    </b-container>
-  </div>
+  <div></div>
 </template>
 
 <script>

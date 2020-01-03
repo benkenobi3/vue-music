@@ -8,7 +8,7 @@ export default {
             );
             const albums = await res.json();
 
-            ctx.commit('updateRelease', albums)
+            ctx.commit('updateRelease', albums.results)
         }
     },
 
@@ -28,4 +28,4 @@ export default {
         }
     },
 
-}
+} 

@@ -8,7 +8,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 
 import store from './store'
-import router from './components/router'
+import router from './components/elements/router'
 
 new Vue({
 

@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <b-container fluid>
-      <b-navbar toggleable="lg" type="dark">
+      <b-navbar toggleable="lg" type="dark" fixed="top">
         
-        <b-navbar-brand href="#">
-          Лого
+        <b-navbar-brand href="/">
+          <img src="./assets/zik.png" alt="logo" style="width: 60px; height: 56px;" class="ml-3">
         </b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
 
-          <b-navbar-nav class="ml-auto" justify-content="center" align-v="center">
+          <b-navbar-nav v-if="srch">
+            <b-nav-item>
+              
+            </b-nav-item>
+          </b-navbar-nav>
+
+          <b-navbar-nav v-else class="ml-auto" justify-content="center" align-v="center">
 
             <b-nav-item active class="mr-4">
               <router-link to="/">
@@ -35,7 +41,7 @@
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item>
-              <b-button pill variant="outline-light">Поиск</b-button>
+              <b-button id="search" pill variant="outline-light">Поиск</b-button>
             </b-nav-item>
           </b-navbar-nav>
           
@@ -48,7 +54,9 @@
       </b-navbar>
 
       <b-row class="content">
-        <router-view></router-view>
+        <b-col cols="12">
+          <router-view></router-view>
+        </b-col>
       </b-row>
 
     </b-container>
@@ -57,7 +65,11 @@
 
 <script>
   export default {
-    name: 'app'
+    data () {
+      return {
+        srch: false,
+      }
+    }
   }
 </script>
 
@@ -70,6 +82,10 @@
 
   .router-link-exact-active {
     color: white;
+  }
+
+  .content {
+    margin-top: 126px;
   }
 
 </style>

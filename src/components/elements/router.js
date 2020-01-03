@@ -3,9 +3,10 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-import Main from './pages/Main'
-import Hotlist from './pages/Hotlist'
-import Library from './pages/Library'
+import Main from '../pages/Main'
+import Hotlist from '../pages/Hotlist'
+import Library from '../pages/Library'
+import NotFound from '../pages/NotFound'
 
 const routes = [
     {
@@ -22,6 +23,11 @@ const routes = [
       path: '/library',
       name: 'Библиотека',
       component: Library
+    },
+    {
+      path: '*',
+      name: '404 Not Found',
+      component: NotFound
     },
 ]
   

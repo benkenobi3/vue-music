@@ -4,12 +4,17 @@
       <b-row class="showcase">
         <b-col cols=11 offset=1>
           <h1>Новые релизы</h1>
-          <ul class="showcase-ul">
+          <ul>
             <li v-for="album in newRelease" :key="album.id">
-              <div class="album">
-                <img :src="album.img_url" alt="fail">
+              <div class="album-card">
+                <div class="album-image">
+                  <img :src="album.img_url" alt="fail">
+                  <router-link :to="{ name: 'Альбом', params: { id: album.id }}">
+                    <img src="../../assets/play-album.png" alt="" class="play-album">
+                  </router-link>
+                </div>               
                 <h4> {{ album.name }} </h4>
-                <p> {{ album.type }} * {{ album.date.slice(0, 4) }}</p>
+                <p> {{ album.type }} • {{ album.date.slice(0, 4) }}</p>
               </div>
             </li>
           </ul>
@@ -17,7 +22,7 @@
       </b-row>
     </b-container>
   </div>
-</template>
+</template> 
 
 <script>
   
@@ -38,11 +43,6 @@
 
 <style>
 
-  h1 {
-    font-weight: 600;
-    margin-bottom: 40px;
-  }
-
   p {
     color: #aaa;
   }
@@ -52,24 +52,48 @@
     max-height: 25vh;
   }
 
-  .showcase-ul {
+  .showcase h1 {
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+
+  .showcase ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  .showcase-ul li {
+  .showcase ul li {
     display: inline-block;
     margin-right: 56px;
   }
 
-  .album img {
+  .album-image {
+    position: relative;
+  }
+
+  .album-image img {
+    display: block;
     min-width: 250px;
     max-height: 250px;
     min-width: 250px;
     max-width: 250px;
     margin-bottom: 5px;
     border-radius: 5px;
+  }
+
+  .play-album {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .album-image:hover .play-album{
+    opacity: 1;
   }
 
 </style>

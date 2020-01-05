@@ -7,6 +7,7 @@ import Main from '../pages/Main'
 import Hotlist from '../pages/Hotlist'
 import Library from '../pages/Library'
 import NotFound from '../pages/NotFound'
+import Album from '../pages/Album'
 
 const routes = [
     {
@@ -23,6 +24,12 @@ const routes = [
       path: '/library',
       name: 'Библиотека',
       component: Library
+    },
+    {
+      path: '/album/:id',
+      name: 'Альбом',
+      component: Album,
+      props: true
     },
     {
       path: '*',

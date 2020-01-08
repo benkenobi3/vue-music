@@ -10,7 +10,7 @@
                 <div class="album-image">
                   <img :src="album.img_url" alt="fail">
                   <router-link :to="{ name: 'Альбом', params: { id: album.id }}">
-                    <img src="../../assets/play-album.png" alt="" class="play-album">
+                    <img src="../../assets/more.png" alt="" class="more">
                   </router-link>
                 </div>               
                 <h4> {{ album.name }} </h4>
@@ -45,18 +45,18 @@
 
   p {
     color: #aaa;
+    text-overflow: ellipsis;
   }
 
   .showcase {
-    min-height: 25vh;
-    max-height: 25vh;
+    min-height: 30vh;
+    max-height: 30vh;
   }
 
   .showcase h1 {
     font-weight: 600;
     margin-bottom: 40px;
   }
-
 
   .showcase ul {
     list-style: none;
@@ -67,6 +67,19 @@
   .showcase ul li {
     display: inline-block;
     margin-right: 56px;
+  }
+
+  .album-card {
+    max-width: 15vw;
+    max-height: 35vh;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .album-card h4 {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .album-image {
@@ -83,7 +96,7 @@
     border-radius: 5px;
   }
 
-  .play-album {
+  .more {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -92,7 +105,7 @@
     opacity: 0;
   }
 
-  .album-image:hover .play-album{
+  .album-image:hover .more{
     opacity: 1;
   }
 

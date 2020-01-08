@@ -49,8 +49,8 @@
   }
 
   .showcase {
-    min-height: 30vh;
-    max-height: 30vh;
+    min-height: 60vh;
+    max-height: 60vh;
   }
 
   .showcase h1 {

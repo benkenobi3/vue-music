@@ -18,6 +18,15 @@ export default {
             const album = await res.json()
 
             ctx.commit('updateAlbum', album)
+        },
+
+        async fetchTop(ctx) {
+            const res = await fetch(
+                "https://musicsear4.herokuapp.com/api/v1/search/album/top/"
+            )
+            const albums = await res.json()
+
+            ctx.commit('updateTop', albums.results)
         }
     },
 
@@ -28,11 +37,16 @@ export default {
         updateAlbum(state, album)
         {
             state.album = album
+        },
+        updateTop(state, albums)
+        {
+            state.top_albums = albums
         }
     },
 
     state: {
         new_release: [],
+        top_albums: [],
         album: []
     },
 
@@ -42,6 +56,9 @@ export default {
         },
         currentAlbum(state) {
             return state.album
+        },
+        topAlbums(state) {
+            return state.top_albums
         }
     },
 

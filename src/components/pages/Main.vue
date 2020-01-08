@@ -70,7 +70,8 @@
   }
 
   .album-card {
-    max-width: 15vw;
+    min-width: 27vh;
+    max-width: 27vh;
     max-height: 35vh;
     overflow: hidden;
     white-space: nowrap;

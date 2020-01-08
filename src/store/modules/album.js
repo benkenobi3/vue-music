@@ -4,7 +4,7 @@ export default {
         async fetchNewRelease(ctx) {
             
             const res = await fetch(
-                "https://musicsear4.herokuapp.com/api/v1/search/album/all/?page=8"
+                "https://musicsear4.herokuapp.com/api/v1/search/album/all/?page=last&limit=10"
             )
             const albums = await res.json()
 

@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import Main from '../pages/Main'
-import Hotlist from '../pages/Hotlist'
+import Top from '../pages/Top'
 import Library from '../pages/Library'
 import NotFound from '../pages/NotFound'
 import Album from '../pages/Album'
@@ -16,9 +16,9 @@ const routes = [
       component: Main
     },
     {
-      path: '/hotlist',
-      name: 'Хотлист',
-      component: Hotlist
+      path: '/top',
+      name: 'Топ-100',
+      component: Top
     },
     {
       path: '/library',

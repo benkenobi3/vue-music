@@ -26,8 +26,8 @@
             </b-nav-item>
 
             <b-nav-item class="mr-4">
-              <router-link to="/hotlist">
-                Хотлист
+              <router-link to="/top">
+                Топ-100
               </router-link>
             </b-nav-item>
 

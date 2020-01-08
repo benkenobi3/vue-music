@@ -75,10 +75,10 @@
 
   .album-image img {
     display: block;
-    min-width: 250px;
-    max-height: 250px;
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 27vh;
+    max-height: 27vh;
+    min-width: 27vh;
+    max-width: 27vh;
     margin-bottom: 5px;
     border-radius: 5px;
   }

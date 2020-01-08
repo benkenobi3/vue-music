@@ -1,27 +1,29 @@
 <template>
-    <div>
-        <b-container>
-            <b-row class="album-page">
-                <b-col cols="6">
-                    <img :src="currentAlbum.img_url" alt="fail">
-                </b-col>
-                <b-col cols="6">
-                    <div class="title">
-                        <h1> {{ currentAlbum.name }} </h1>
-                        <p> {{ currentAlbum.type }} • {{ currentAlbum.duration }} • {{ currentAlbum.date }}</p>
-                    </div>
-                    <ul class="songs">
-                        <li v-for="song in currentAlbum.songs" :key="song.id">
-                            <div class="song">
-                                <h5> {{ song.name }} </h5>
-                                <p> {{ song.duration }} </p>
-                            </div>
-                        </li>
-                      </ul>
-                </b-col>
-            </b-row>
-        </b-container>
-    </div>
+  <div>
+    <b-container>
+      <b-row class="album-page">
+        <b-col cols="6">
+          <transition name="image">
+            <img :src="currentAlbum.img_url" alt="fail">
+          </transition>
+        </b-col>
+        <b-col cols="6">
+          <div class="title">
+            <h1> {{ currentAlbum.name }} </h1>
+            <p> {{ currentAlbum.type }} • {{ currentAlbum.duration }} • {{ currentAlbum.date }}</p>
+          </div>
+          <ul class="songs">
+            <li v-for="song in currentAlbum.songs" :key="song.id">
+              <div class="song">
+                <h5> {{ song.name }} </h5>
+                <p> {{ song.duration }} </p>
+              </div>
+            </li>
+          </ul>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
 </template>
   
 <script>
@@ -74,9 +76,17 @@ export default {
   }
 
   .song {
-    background-color:rgba(255, 255, 250, 0.1) ;
+    background-color:rgba(255, 255, 250, 0.1);
     border-radius: 5px;
     padding-left: 5px;
+  }
+
+  .image-enter {
+    opacity: 0;
+  }
+
+  .image-enter-to {
+    opacity: 1;
   }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-container fluid>
-      <b-navbar toggleable="lg" type="dark" fixed="top">
+      <b-navbar toggleable="lg" class="navbar" fixed="top">
         
         <b-navbar-brand href="/">
           <img src="./assets/zik.png" alt="logo" style="width: 60px; height: 56px;" class="ml-3">
@@ -75,7 +75,8 @@
 
 <style>
 
-  b-navbar {
+  .navbar {
+    background-color: black;
     max-height: 56px;
     min-height: 56px;
   }

@@ -12,13 +12,10 @@
         <b-collapse id="nav-collapse" is-nav>
 
           <b-navbar-nav v-if="isSearch" class="ml-auto" justify-content="center" align-v="center">
-            <b-nav-item active class="mr-1"> 
               <b-form-input
                 id="search-form"
                 v-model="search"
-                type="search"
                 ></b-form-input>
-            </b-nav-item>
           </b-navbar-nav>
 
           <b-navbar-nav v-else class="ml-auto" justify-content="center" align-v="center">
@@ -85,8 +82,9 @@
           if (this.search != "") {
             this.$router.push({name: "Поиск", params: {srch: this.search}});
           }
-          else
+          else {
             this.isSearch = false
+          }
         }
         else
         {
@@ -104,6 +102,10 @@
   #search-form {
     min-width: 30vw;
     max-width: 30vw;
+    background-color: #232323;
+    border-color: #232323;
+    margin-right: 5px;
+    color: white;
   }
 
   .navbar {

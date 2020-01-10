@@ -11,9 +11,13 @@
 
         <b-collapse id="nav-collapse" is-nav>
 
-          <b-navbar-nav v-if="srch">
-            <b-nav-item>
-              
+          <b-navbar-nav v-if="isSearch" class="ml-auto" justify-content="center" align-v="center">
+            <b-nav-item active class="mr-1"> 
+              <b-form-input
+                id="search-form"
+                v-model="search"
+                type="search"
+                ></b-form-input>
             </b-nav-item>
           </b-navbar-nav>
 
@@ -41,7 +45,9 @@
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item>
-              <b-button id="search" pill variant="outline-light">Поиск</b-button>
+              <b-button id="search" pill variant="dark" v-on:click="isSearch=true">
+                <b-icon icon="search"></b-icon> Поиск
+              </b-button>
             </b-nav-item>
           </b-navbar-nav>
           
@@ -53,7 +59,7 @@
 
       </b-navbar>
 
-      <b-row class="content">
+      <b-row class="content" v-on:click="isSearch=false">
         <b-col cols="12">
           <router-view></router-view>
         </b-col>
@@ -67,13 +73,19 @@
   export default {
     data () {
       return {
-        srch: false,
+        isSearch: false,
+        search: ""
       }
     }
   }
 </script>
 
 <style>
+
+  #search-form {
+    min-width: 30vw;
+    max-width: 30vw;
+  }
 
   .navbar {
     background-color: black;

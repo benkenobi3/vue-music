@@ -45,7 +45,7 @@
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item>
-              <b-button id="search" pill variant="dark" v-on:click="isSearch=true">
+              <b-button id="search" pill variant="dark" v-on:click="goSearch">
                 <b-icon icon="search"></b-icon> Поиск
               </b-button>
             </b-nav-item>
@@ -61,7 +61,7 @@
 
       <b-row class="content" v-on:click="isSearch=false">
         <b-col cols="12">
-          <router-view></router-view>
+          <router-view :key="$route.fullPath"></router-view>
         </b-col>
       </b-row>
 
@@ -71,12 +71,31 @@
 
 <script>
   export default {
+
     data () {
       return {
         isSearch: false,
         search: ""
       }
+    },
+
+    methods: {
+      goSearch () {
+        if (this.isSearch) {
+          if (this.search != "") {
+            this.$router.push({name: "Поиск", params: {srch: this.search}});
+          }
+          else
+            this.isSearch = false
+        }
+        else
+        {
+          this.isSearch = true
+          this.search = ""
+        }
+      },
     }
+
   }
 </script>
 

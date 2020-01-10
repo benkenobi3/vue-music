@@ -31,7 +31,7 @@
     computed: mapGetters(["topAlbums"]),
     methods: mapActions(["fetchTop"]),
     
-    async mounted() {
+    async created() {
       this.fetchTop();
     }
 

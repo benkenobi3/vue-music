@@ -33,7 +33,7 @@
     computed: mapGetters(["newRelease"]),
     methods: mapActions(["fetchNewRelease"]),
     
-    async mounted() {
+    async created() {
       this.fetchNewRelease();
     }
 

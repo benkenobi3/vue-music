@@ -3,9 +3,7 @@
     <b-container>
       <b-row class="album-page">
         <b-col cols="6">
-          <transition name="image">
-            <img :src="currentAlbum.img_url" alt="fail">
-          </transition>
+          <img :src="currentAlbum.img_url" alt="fail">
         </b-col>
         <b-col cols="6">
           <div class="title">
@@ -36,7 +34,7 @@ export default {
     computed: mapGetters(["currentAlbum"]),
     methods: mapActions(["fetchAlbum"]),
 
-    async mounted() {
+    async created() {
       this.fetchAlbum(this.id);
     }
 

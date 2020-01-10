@@ -8,6 +8,7 @@ import Top from '../pages/Top'
 import Library from '../pages/Library'
 import NotFound from '../pages/NotFound'
 import Album from '../pages/Album'
+import Search from '../pages/Search'
 
 const routes = [
     {
@@ -19,6 +20,12 @@ const routes = [
       path: '/top',
       name: 'Топ-100',
       component: Top
+    },
+    {
+      path: '/search/:srch',
+      name: 'Поиск',
+      component: Search,
+      props: true
     },
     {
       path: '/library',

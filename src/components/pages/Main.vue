@@ -43,11 +43,6 @@
 
 <style>
 
-  p {
-    color: #aaa;
-    text-overflow: ellipsis;
-  }
-
   .showcase {
     min-height: 60vh;
     max-height: 60vh;

@@ -63,17 +63,17 @@ export default {
     border-radius: 5px;
   }
 
-  .title {
+  .album-page .title {
       margin-bottom: 30px;
   }
 
-  .songs {
+  .album-page .songs {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  .song {
+  .album-page .song {
     background-color:rgba(255, 255, 250, 0.1);
     border-radius: 5px;
     padding-left: 5px;

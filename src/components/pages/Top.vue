@@ -20,7 +20,7 @@
       return {
         fields: [
         {key: 'name', label:'Название', sortable: true},
-        {key: 'type', label:'Тип', sortable: true},
+        {key: 'singers', label:'Исполнители', sortable: true},
         {key: 'duration', label:'Продолжительность', sortable: true},
         {key: 'date', label:'Дата', sortable: true},
         {key: 'rate', label:'Рейтинг', sortable: true},
@@ -30,7 +30,7 @@
 
     computed: mapGetters(["topAlbums"]),
     methods: mapActions(["fetchTop"]),
-    
+
     async created() {
       this.fetchTop();
     }

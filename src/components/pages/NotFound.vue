@@ -21,7 +21,6 @@ export default {
 </script>
 
 <style>
-
     .not-found-content {
         height: 80vh;
     }

@@ -99,6 +99,11 @@
 
 <style>
 
+  p {
+    color: #aaa;
+    text-overflow: ellipsis;
+  }
+
   #search-form {
     min-width: 30vw;
     max-width: 30vw;

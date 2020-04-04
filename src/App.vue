@@ -58,7 +58,7 @@
 
       <b-row class="content" v-on:click="isSearch=false">
         <b-col cols="12">
-          <router-view :key="$route.fullPath"></router-view>
+          <router-view></router-view>
         </b-col>
       </b-row>
 

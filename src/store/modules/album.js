@@ -27,6 +27,10 @@ export default {
             const albums = await res.json()
 
             ctx.commit('updateTop', albums.results)
+        },
+
+        cleanUp(ctx) {
+            ctx.commit('cleanUp')
         }
     },
 
@@ -41,6 +45,10 @@ export default {
         updateTop(state, albums)
         {
             state.top_albums = albums
+        },
+        cleanUp(state)
+        {
+            state.album = null
         }
     },
 

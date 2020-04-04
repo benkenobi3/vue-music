@@ -32,10 +32,14 @@ export default {
     props: ['id'],
 
     computed: mapGetters(["currentAlbum"]),
-    methods: mapActions(["fetchAlbum"]),
+    methods: mapActions(["fetchAlbum", "cleanUp"]),
 
     async created() {
-      this.fetchAlbum(this.id);
+      this.fetchAlbum(this.id)
+    },
+    
+    beforeDestroy() {
+      this.cleanUp()
     }
 
 }

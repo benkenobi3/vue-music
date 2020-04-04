@@ -1,24 +1,17 @@
-# music
+# Фронтенд-часть проекта Music Search
 
-## Project setup
-```
-yarn install
-```
+Проект Music Search - это сервис поиска и оценки музыки.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Полезные ссылки
 
-### Compiles and minifies for production
-```
-yarn build
-```
+Посмотреть на результат: https://sear4music.herokuapp.com
 
-### Lints and fixes files
-```
-yarn lint
-```
+Backend проекта: https://github.com/benkenobi3/django-music
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Для быстрого старта
+
+Для запуска проекта удобно воспользоваться "docker-compose"
+
+Достаточно выполнить одну команду:
+
+    $ docker-compose up

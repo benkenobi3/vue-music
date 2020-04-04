@@ -5,7 +5,7 @@ WORKDIR /app
 FROM base AS dependencies
 
 COPY package*.json ./
-RUN npm install
+RUN yarn
 
 # --- #
 FROM dependencies AS build
@@ -16,7 +16,7 @@ COPY public /app/public
 COPY src /app/src
 COPY server.js /app
 
-RUN npm run build
+RUN yarn build
 
 # --- Alpine ----
 FROM node:8.9-alpine AS release  

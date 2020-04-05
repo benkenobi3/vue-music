@@ -42,8 +42,8 @@
 
           <b-navbar-nav class="mr-auto">
             <b-nav-item>
-              <b-button id="search" pill variant="dark" v-on:click="goSearch">
-                <b-icon icon="search"></b-icon> Поиск
+              <b-button id="search" pill variant="black" v-on:click="goSearch">
+                <b-icon icon="search"></b-icon>
               </b-button>
             </b-nav-item>
           </b-navbar-nav>
@@ -104,6 +104,16 @@
     text-overflow: ellipsis;
   }
 
+  input {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  button {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
   #search-form {
     min-width: 30vw;
     max-width: 30vw;
@@ -129,4 +139,5 @@
     height: 100%;
   }
 
+  
 </style>

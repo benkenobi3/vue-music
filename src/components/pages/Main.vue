@@ -41,68 +41,59 @@
 
 </script>
 
-<style>
+<style lang="sass">
 
-  .showcase {
-    min-height: 60vh;
-    max-height: 60vh;
-  }
+  .showcase 
+    min-height: 60vh
+    max-height: 60vh
+  
+    h1 
+      font-weight: 600
+      margin-bottom: 40px
+  
+    ul 
+      list-style: none
+      margin: 0
+      padding: 0
+  
+      li 
+        display: inline-block
+        margin-right: 56px
+  
+  .album-card 
+    min-width: 27vh
+    max-width: 27vh
+    max-height: 35vh
+    overflow: hidden
+    white-space: nowrap
 
-  .showcase h1 {
-    font-weight: 600;
-    margin-bottom: 40px;
-  }
+    h4 
+      width: 100%
+      overflow: hidden
+      text-overflow: ellipsis
 
-  .showcase ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+  .album-image 
+    position: relative
+    
+    img 
+      display: block
+      min-width: 27vh
+      max-height: 27vh
+      min-width: 27vh
+      max-width: 27vh
+      margin-bottom: 5px
+      border-radius: 5px
 
-  .showcase ul li {
-    display: inline-block;
-    margin-right: 56px;
-  }
+    .more 
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
 
-  .album-card {
-    min-width: 27vh;
-    max-width: 27vh;
-    max-height: 35vh;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .album-card h4 {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .album-image {
-    position: relative;
-  }
-
-  .album-image img {
-    display: block;
-    min-width: 27vh;
-    max-height: 27vh;
-    min-width: 27vh;
-    max-width: 27vh;
-    margin-bottom: 5px;
-    border-radius: 5px;
-  }
-
-  .more {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-
-  .album-image:hover .more{
-    opacity: 1;
-  }
-
+    &:hover
+      .more
+        opacity: 1
+  
 </style>

@@ -45,50 +45,42 @@ export default {
 }
 </script>
   
-<style>
+<style lang="sass">
 
-  .album-page {
-    min-height: 50vh;
-    max-height: 50vh;
-  }
+  .album-page
+    min-height: 50vh
+    max-height: 50vh
 
-  .album-page h1 {
-    font-weight: 600;
-    margin: 0;
-  }
+    h1
+      font-weight: 600
+      margin: 0
 
-  .album-page img {
-    display: block;
-    min-width: 500px;
-    max-height: 500px;
-    min-width: 500px;
-    max-width: 500px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-  }
+    img 
+      display: block
+      min-width: 500px
+      max-height: 500px
+      min-width: 500px
+      max-width: 500px
+      margin-bottom: 5px
+      border-radius: 5px
 
-  .album-page .title {
-      margin-bottom: 30px;
-  }
+    title
+        margin-bottom: 30px
+    
+    .songs
+      list-style: none
+      margin: 0
+      padding: 0
 
-  .album-page .songs {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+    .song 
+      background-color: rgba(255, 255, 250, 0.1)
+      border-radius: 5px
+      padding-left: 5px
 
-  .album-page .song {
-    background-color:rgba(255, 255, 250, 0.1);
-    border-radius: 5px;
-    padding-left: 5px;
-  }
+  .image-enter 
+    opacity: 0
 
-  .image-enter {
-    opacity: 0;
-  }
-
-  .image-enter-to {
-    opacity: 1;
-  }
+  .image-enter-to 
+    opacity: 1
 
 </style>

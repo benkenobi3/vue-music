@@ -20,16 +20,16 @@ export default {
 }
 </script>
 
-<style>
-    .not-found-content {
-        height: 80vh;
-    }
+<style lang="sass">
 
-    .error {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        color: white;
-        font-size: 60px;
-    }
+  .not-found-content
+    height: 80vh
+    
+  .error 
+    width: 100%
+    height: 100%
+    text-align: center
+    color: white
+    font-size: 60px
+    
 </style>

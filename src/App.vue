@@ -48,10 +48,8 @@
             </b-nav-item>
           </b-navbar-nav>
           
-          <b-navbar-nav>
-            <router-link to="/login">
-              Sign in
-            </router-link>
+          <b-navbar-nav justify-content="center">
+            <a href="/login" class="mr-3">Вход</a>
           </b-navbar-nav>
 
         </b-collapse>
@@ -122,7 +120,7 @@
   @font-face
     font-family: Gilroy
     src: url(assets/fonts/Gilroy-Light.woff)
-    font-weight: 200
+    font-weight: 200 
 
   p
     color: #aaa

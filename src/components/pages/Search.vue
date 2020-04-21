@@ -60,28 +60,26 @@
   };
 </script>
 
-<style>
-.search-page .ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+<style lang="sass">
+.search-page
+  .ul 
+    list-style: none
+    margin: 0
+    padding: 0
 
-.album {
-  background-color:rgba(255, 255, 250, 0.1);
-  border-radius: 5px;
-  padding-left: 5px;
-}
+.album 
+  background-color:rgba(255, 255, 250, 0.1)
+  border-radius: 5px
+  padding-left: 5px
 
-.song {
-  background-color:rgba(255, 255, 250, 0.1);
-  border-radius: 5px;
-  padding-left: 5px;
-}
+.song 
+  background-color:rgba(255, 255, 250, 0.1)
+  border-radius: 5px
+  padding-left: 5px
 
-.singer {
-  background-color:rgba(255, 255, 250, 0.1);
-  border-radius: 5px;
-  padding-left: 5px;
-}
+.singer 
+  background-color:rgba(255, 255, 250, 0.1)
+  border-radius: 5px
+  padding-left: 5px
+
 </style>

@@ -48,8 +48,10 @@
             </b-nav-item>
           </b-navbar-nav>
           
-          <b-navbar-nav style="width: 56px;">
-            <p>ACC</p>
+          <b-navbar-nav>
+            <router-link to="/login">
+              Sign in
+            </router-link>
           </b-navbar-nav>
 
         </b-collapse>
@@ -77,10 +79,17 @@
     },
 
     methods: {
+
       goSearch () {
+
         if (this.isSearch) {
           if (this.search != "") {
-            this.$router.push({name: "Поиск", params: {srch: this.search}});
+
+            this.$router.push({
+              name: "Поиск",
+              params: {srch: this.search}
+            });
+
           }
           else {
             this.isSearch = false
@@ -91,53 +100,67 @@
           this.isSearch = true
           this.search = ""
         }
+
       },
     }
 
   }
 </script>
 
-<style>
+<style lang="sass">
 
-  p {
-    color: #aaa;
-    text-overflow: ellipsis;
-  }
+  @font-face
+    font-family: Gilroy
+    src: url(assets/fonts/Gilroy-Regular.woff)
+    font-weight: normal
 
-  input {
-    outline: none !important;
-    box-shadow: none !important;
-  }
+  @font-face
+    font-family: Gilroy
+    src: url(assets/fonts/Gilroy-Medium.woff)
+    font-weight: bold
 
-  button {
-    outline: none !important;
-    box-shadow: none !important;
-  }
+  @font-face
+    font-family: Gilroy
+    src: url(assets/fonts/Gilroy-Light.woff)
+    font-weight: 200
 
-  #search-form {
-    min-width: 30vw;
-    max-width: 30vw;
-    background-color: #232323;
-    border-color: #232323;
-    margin-right: 5px;
-    color: white;
-  }
+  p
+    color: #aaa
+    text-overflow: ellipsis
+  
 
-  .navbar {
-    background-color: black;
-    max-height: 56px;
-    min-height: 56px;
-  }
+  input
+    outline: none !important
+    box-shadow: none !important
+  
 
-  .router-link-exact-active {
-    color: white;
-  }
+  button
+    outline: none !important
+    box-shadow: none !important
+  
 
-  .content {
-    margin-top: 126px;
-    width: 100%;
-    height: 100%;
-  }
+  #search-form
+    min-width: 30vw
+    max-width: 30vw
+    background-color: #232323
+    border-color: #232323
+    margin-right: 5px
+    color: white
+  
 
+  .navbar
+    background-color: black
+    max-height: 56px
+    min-height: 56px
+  
+
+  .router-link-exact-active
+    color: white
+  
+
+  .content
+    margin-top: 126px
+    width: 100vw
+    height: 100%
   
 </style>

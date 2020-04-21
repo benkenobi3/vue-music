@@ -3,7 +3,7 @@
     <b-container>
       <b-row class="album-page">
         <b-col cols="6">
-          <img :src="currentAlbum.img_url" alt="fail">
+          <img :src="currentAlbum.img_url">
         </b-col>
         <b-col cols="6">
           <div class="title">

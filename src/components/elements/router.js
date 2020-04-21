@@ -9,6 +9,7 @@ import Library from '../pages/Library'
 import NotFound from '../pages/NotFound'
 import Album from '../pages/Album'
 import Search from '../pages/Search'
+import Login from '../pages/Login'
 
 const routes = [
     {
@@ -37,6 +38,11 @@ const routes = [
       name: 'Альбом',
       component: Album,
       props: true
+    },
+    {
+      path: '/login',
+      name: 'Авторизация',
+      component: Login
     },
     {
       path: '*',

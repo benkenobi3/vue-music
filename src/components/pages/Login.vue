@@ -18,12 +18,12 @@
           </div>
           <div class="border-box p-3 mt-5">
             <p>Еще нет аккаунта?</p>
-            <a href="" class="hint">Создать аккаунт</a>
+            <a href="" class="hint text-right">Создать аккаунт</a>
           </div>
           <div class="footer justify-content-center">
             <a href="">Поддержка</a>
             <a href="" class="ml-3">Соглашение</a>
-            <a href="" class="ml-5">Связаться с нами</a>
+            <a href="" class="ml-3">Связаться с нами</a>
           </div>
         </b-col>
       </b-row>
@@ -56,7 +56,7 @@ export default {
 
     p
       display: inline-block
-      width: 50%
+      width: 60%
       font-family: Gilroy
       font-weight: normal
       font-size: 1.1em
@@ -76,25 +76,26 @@ export default {
       font-family: Gilroy
       font-weight: 200
       font-size: 1em
-      color: #FF8989
+      color: #1f9f88
 
   .footer
     display: flex
     position: relative
     margin-top: 7em
 
-    a 
+    a
       display: inline-block
       font-family: Gilroy
       font-weight: 200
       font-size: 1em
 
   #login-btn
-    box-shadow: 0px 4px 4px rgba(255, 0, 0, 0.6)
+    box-shadow: 0px 4px 4px rgba(31, 159, 136, 0.6)
+    border-color: #1f9f88
     font-family: Gilroy
     font-weight: normal
     font-size: 1.5em
     width: 100%
-    background-color: red
+    background-color: #1f9f88
   
 </style>

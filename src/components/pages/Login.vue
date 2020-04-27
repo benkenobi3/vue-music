@@ -2,12 +2,12 @@
   <div>
     <b-container fluid class="login-page">
       <b-row class="align-items-center justify-content-center">
-        <b-col cols="4" brakepoint="lg">
+        <b-col lg="4">
           <h1 class="text-center mt-3">MUSIC SEARCH</h1>
         </b-col>
       </b-row>
       <b-row class="align-items-center justify-content-center mt-4">
-        <b-col cols="3" brakepoint="lg">
+        <b-col lg="3">
           <div class="border-box p-3 pt-4 pb-4 mt-4">
             <label for="username">Имя пользователя или email</label>
             <b-form-input id="username" type="text"></b-form-input>

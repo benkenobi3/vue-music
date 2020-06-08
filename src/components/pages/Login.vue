@@ -9,7 +9,7 @@
       <b-row class="align-items-center justify-content-center mt-4">
         <b-col lg="3">
           <div class="border-box p-3 pt-4 pb-4 mt-4">
-            <label for="username">Имя пользователя или email</label>
+            <label for="username">Имя пользователя</label>
             <b-form-input id="username" type="text"></b-form-input>
             <label for="password" class="mt-3">Пароль</label>
             <a href="" class="hint text-right">Забыли пароль?</a>
@@ -33,7 +33,20 @@
 
 <script>
 export default {
-  
+
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+
+  methods: {
+    login: function() {
+        
+    }
+  }
+
 }
 </script>
 

@@ -3,7 +3,7 @@
     <b-container fluid>
       <b-navbar toggleable="lg" class="navbar" fixed="top">
         
-        <b-navbar-brand href="/">
+        <b-navbar-brand href="#" router-component-name="Main" to="/">
           <img src="./assets/zik.png" alt="logo" style="width: 60px; height: 56px;" class="ml-3">
         </b-navbar-brand>
 
@@ -11,10 +11,10 @@
 
         <b-collapse id="nav-collapse" is-nav>
 
-          <b-navbar-nav v-if="isSearch" class="ml-auto" justify-content="center" align-v="center">
+          <b-navbar-nav v-if="is_search" class="ml-auto" justify-content="center" align-v="center">
               <b-form-input
                 id="search-form"
-                v-model="search"
+                v-model="search_text"
                 ></b-form-input>
           </b-navbar-nav>
 
@@ -71,8 +71,8 @@
 
     data () {
       return {
-        isSearch: false,
-        search: ""
+        is_search: false,
+        search_text: ""
       }
     },
 
@@ -80,23 +80,24 @@
 
       goSearch () {
 
-        if (this.isSearch) {
-          if (this.search != "") {
+        if (this.is_search) {
+          if (this.search_text != "") {
 
             this.$router.push({
               name: "Поиск",
-              params: {srch: this.search}
+              path: '/',
+              params: {srch: this.search_text}
             });
 
           }
           else {
-            this.isSearch = false
+            this.is_search = false
           }
         }
         else
         {
-          this.isSearch = true
-          this.search = ""
+          this.is_search = true
+          this.search_text = ""
         }
 
       },

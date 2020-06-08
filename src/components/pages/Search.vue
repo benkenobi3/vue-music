@@ -35,6 +35,11 @@
               </li>
             </ul>
           </div>
+          <div v-show="(getSearchSingers.length == 0) && 
+            (getSearchSongs.length == 0) &&
+            (getSearchAlbums.length == 0)">
+            <h2>Поиск не дал результатов</h2>
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -52,9 +57,16 @@
     methods: mapActions(["fetchSearchAlbums", "fetchSearchSongs", "fetchSearchSingers"]),
     
     async created() {
-      this.fetchSearchAlbums(this.srch);
-      this.fetchSearchSongs(this.srch);
-      this.fetchSearchSingers(this.srch);
+      this.fetchSearchAlbums(this.srch)
+      this.fetchSearchSongs(this.srch)
+      this.fetchSearchSingers(this.srch)
+    },
+
+    async beforeRouteUpdate (to, from, next) {
+      this.fetchSearchAlbums(to.params.srch)
+      this.fetchSearchSongs(to.params.srch)
+      this.fetchSearchSingers(to.params.srch)
+      next()
     }
 
   };

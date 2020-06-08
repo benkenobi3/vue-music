@@ -11,6 +11,15 @@ Vue.use(BootstrapVueIcons)
 import store from './store'
 import router from './components/elements/router'
 
+import Axios from 'axios'
+Vue.prototype.$http = Axios
+
+const token = localStorage.getItem('token')
+
+if (token) {
+  Vue.prototype.$http.defaults.headers.common['Authorization'] = 'JWT ${token}'
+}
+
 new Vue({
 
   store,

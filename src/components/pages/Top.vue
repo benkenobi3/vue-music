@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-container fluid>
+    <b-container>
       <b-row class="showcase">
         <b-col cols=10 offset=1>
-          <h1>Топ-10</h1>
+          <h1 id="top-h">Топ-10</h1>
           <ul id="top-list">
             <li v-for="album in topAlbums" :key="album.id">
               <b-media>
@@ -37,6 +37,9 @@
 </script>
 
 <style lang="sass">
+
+  #top-h
+    margin-bottom: 20px
 
   #top-list
     list-style: none

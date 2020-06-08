@@ -1,20 +1,40 @@
 <template>
   <div>
     <b-container>
-      <b-row class="album-page">
+      <b-row class="main-area">
         <b-col cols="6">
           <img :src="currentAlbum.img_url">
         </b-col>
         <b-col cols="6">
-          <div class="title">
-            <h1> {{ currentAlbum.name }} </h1>
-            <p> {{ currentAlbum.type }} • {{ currentAlbum.duration }} • {{ currentAlbum.date }}</p>
+          <div>
+            <h1> {{currentAlbum.name}} </h1>
+            <div class="info">
+              <div class="info-line w-100">
+                Исполнитель <b-link>{{currentAlbum.singers[0].name}}</b-link>
+              </div>
+              <br>
+              <div class="info-line w-100">
+                Тип <b-link>{{currentAlbum.type}}</b-link>
+              </div>
+              <div class="info-line w-100">
+                Дата выхода <b-link>{{currentAlbum.date}}</b-link>
+              </div>
+
+              <div class="info-line w-100">
+                Длительность <b-link>{{currentAlbum.duration}}</b-link>
+              </div>
+            </div>
           </div>
+        </b-col>
+      </b-row>
+      <b-row class="songs-area">
+        <b-col cols="12">
+          <h2>Треки</h2>
           <ul class="songs">
             <li v-for="song in currentAlbum.songs" :key="song.id">
               <div class="song">
-                <h5> {{ song.name }} </h5>
-                <p> {{ song.duration }} </p>
+                <h5> {{song.name}} </h5>
+                <p> {{song.duration}} </p>
               </div>
             </li>
           </ul>
@@ -47,12 +67,13 @@ export default {
   
 <style lang="sass">
 
-  .album-page
+  .main-area
     min-height: 50vh
     max-height: 50vh
 
     h1
-      font-weight: 600
+      font-family: Gilroy
+      font-weight: bold
       margin: 0
 
     img 
@@ -63,10 +84,24 @@ export default {
       max-width: 500px
       margin-bottom: 5px
       border-radius: 5px
-
-    title
-        margin-bottom: 30px
     
+    .info
+      margin-top: 100px
+
+      .info-line
+        font-family: Gilroy
+        font-size: 1.5em
+
+        a
+          margin-left: 20px
+
+
+  .songs-area
+
+    h2
+      margin-top: 50px
+      margin-bottom: 20px
+
     .songs
       list-style: none
       margin: 0
@@ -76,6 +111,7 @@ export default {
       background-color: rgba(255, 255, 250, 0.1)
       border-radius: 5px
       padding-left: 5px
+
 
   .image-enter 
     opacity: 0

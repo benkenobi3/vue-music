@@ -47,7 +47,8 @@
     min-height: 60vh
     max-height: 60vh
   
-    h1 
+    h1
+      font-family: Gilroy
       font-weight: 600
       margin-bottom: 40px
   
@@ -71,6 +72,11 @@
       width: 100%
       overflow: hidden
       text-overflow: ellipsis
+      font-family: Gilroy
+      font-weight: normal
+
+    p
+      font-family: Gilroy
 
   .album-image 
     position: relative

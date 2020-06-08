@@ -14,7 +14,9 @@
             <label for="password" class="mt-3">Пароль</label>
             <a href="" class="hint text-right">Забыли пароль?</a>
             <b-form-input id="password" type="password"></b-form-input>
-            <b-button id="login-btn" class="mt-4" variant="danger">Войти</b-button>
+            <b-button id="login-btn" class="mt-4" variant="danger" v-on:click="login">
+              Войти
+            </b-button>
           </div>
           <div class="border-box p-3 mt-5">
             <p>Еще нет аккаунта?</p>

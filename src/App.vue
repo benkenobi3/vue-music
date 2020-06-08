@@ -56,13 +56,13 @@
 
       </b-navbar>
 
-      <b-row class="content" v-on:click="isSearch=false">
-        <b-col cols="12">
-          <router-view></router-view>
-        </b-col>
-      </b-row>
-
     </b-container>
+    
+    <div class="content" v-on:click="is_search=false">
+      <router-view></router-view>
+    </div>
+    
+
   </div>
 </template>
 
@@ -113,15 +113,24 @@
     src: url(assets/fonts/Gilroy-Regular.woff)
     font-weight: normal
 
+
   @font-face
     font-family: Gilroy
     src: url(assets/fonts/Gilroy-Medium.woff)
     font-weight: bold
 
+  
   @font-face
     font-family: Gilroy
     src: url(assets/fonts/Gilroy-Light.woff)
-    font-weight: 200 
+    font-weight: 200
+
+
+  @font-face
+    font-family: Gilroy
+    src: url(assets/fonts/Gilroy-ExtraBold.woff)
+    font-weight: 800
+
 
   p
     color: #aaa
@@ -158,8 +167,8 @@
   
 
   .content
-    margin-top: 126px
-    width: 100vw
+    padding-top: 120px
+    width: 100%
     height: 100%
   
 </style>

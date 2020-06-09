@@ -9,20 +9,44 @@
           <div>
             <h1> {{currentAlbum.name}} </h1>
             <div class="info">
-              <div class="info-line w-100">
-                Исполнитель <b-link>{{currentAlbum.singers[0].name}}</b-link>
-              </div>
-              <br>
-              <div class="info-line w-100">
-                Тип <b-link>{{currentAlbum.type}}</b-link>
-              </div>
-              <div class="info-line w-100">
-                Дата выхода <b-link>{{currentAlbum.date}}</b-link>
-              </div>
-
-              <div class="info-line w-100">
-                Длительность <b-link>{{currentAlbum.duration}}</b-link>
-              </div>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td><span class="info-line">Исполнитель</span></td>
+                    <td><b-link v-if="currentAlbum.singers">
+                        {{currentAlbum.singers[0].name}}
+                      </b-link> </td>
+                  </tr>
+                  <br>
+                  <tr>
+                    <td><span class="info-line">Тип альбома</span></td>
+                    <td><b-link>{{currentAlbum.type}}</b-link></td>
+                  </tr>
+                  <tr>
+                    <td><span class="info-line">Дата выхода</span></td>
+                    <td><b-link>{{currentAlbum.date}}</b-link></td>
+                  </tr>
+                  <tr>
+                    <td><span class="info-line">Длительность</span></td>
+                    <td><b-link>{{currentAlbum.duration}}</b-link></td>
+                  </tr>
+                  <tr>
+                    <td><span class="info-line">Ваша оценка</span></td>
+                    <td>
+                      <b-form-rating
+                        class="rate"
+                        inline
+                        no-border
+                        size="lg"
+                        icon-empty="heart"
+                        icon-half="heart-half"
+                        icon-full="heart-fill"
+                        v-model="value">
+                      </b-form-rating>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </b-col>
@@ -57,6 +81,12 @@ export default {
     async created() {
       this.fetchAlbum(this.id)
     },
+
+    data() {
+      return {
+        value: 3
+      }
+    },
     
     beforeDestroy() {
       this.cleanUp()
@@ -68,13 +98,20 @@ export default {
 <style lang="sass">
 
   .main-area
-    min-height: 50vh
-    max-height: 50vh
+    height: 100%
 
     h1
       font-family: Gilroy
       font-weight: bold
       margin: 0
+      display: inline-block
+      margin-right: 20px
+
+    h5
+      display: inline-block
+      vertical-align: top
+      font-family: Gilroy
+      font-weight: 200
 
     img 
       display: block
@@ -86,7 +123,7 @@ export default {
       border-radius: 5px
     
     .info
-      margin-top: 100px
+      margin-top: 50px
 
       .info-line
         font-family: Gilroy
@@ -94,6 +131,21 @@ export default {
 
         a
           margin-left: 20px
+
+    .rate
+      background-color: #000
+      outline: none !important
+      box-shadow: none !important
+      padding: 0 
+      margin-top: -4px
+      margin-left: -4px
+
+          
+
+    th, td 
+      border: 0
+      margin-left: 0
+      padding-left: 0
 
 
   .songs-area

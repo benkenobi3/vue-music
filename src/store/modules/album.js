@@ -2,7 +2,6 @@ export default {
 
     actions: {
         async fetchNewRelease(ctx) {
-            
             const res = await fetch(
                 "https://musicsear4.herokuapp.com/api/v1/search/album/all/?limit=10"
             )
@@ -29,6 +28,15 @@ export default {
             ctx.commit('updateTop', albums.results)
         },
 
+        async fetchLibrary(ctx) {
+            const res = await fetch(
+                "https://musicsear4.herokuapp.com/api/v1/search/album/all/?limit=50"
+            )
+            const albums = await res.json()
+
+            ctx.commit('updateLibrary', albums.results)
+        },
+
         cleanUp(ctx) {
             ctx.commit('cleanUp')
         }
@@ -46,6 +54,10 @@ export default {
         {
             state.top_albums = albums
         },
+        updateLibrary(state, albums)
+        {
+            state.library_albums = albums
+        },
         cleanUp(state)
         {
             state.album = null
@@ -55,7 +67,8 @@ export default {
     state: {
         new_release: [],
         top_albums: [],
-        album: []
+        album: [],
+        library_albums: []
     },
 
     getters: {
@@ -67,6 +80,9 @@ export default {
         },
         topAlbums(state) {
             return state.top_albums
+        },
+        libraryAlbums(state) {
+            return state.library_albums
         }
     },
 

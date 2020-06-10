@@ -17,7 +17,7 @@
 
 <script>
   
-  import {mapGetters, mapActions} from 'vuex';
+  import {mapGetters, mapActions} from 'vuex'
   import AlbumCard from '../custom/AlbumCard.vue'
 
   export default {

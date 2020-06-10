@@ -10,6 +10,7 @@ import NotFound from '../pages/NotFound'
 import Album from '../pages/Album'
 import Search from '../pages/Search'
 import Login from '../pages/Login'
+import Singer from '../pages/Singer'
 
 const routes = [
     {
@@ -42,7 +43,7 @@ const routes = [
     {
       path: '/singer/:id',
       name: 'Исполнитель',
-      component: Album,
+      component: Singer,
       props: true
     },
     {

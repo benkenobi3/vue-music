@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b-container>
+    <b-container fluid>
       <b-row class="showcase">
-        <b-col cols=10 offset=1>
+        <b-col cols=11 offset="1">
           <h1 id="top-h">Топ-10</h1>
           <ul id="top-list">
             <li v-for="album in topAlbums" :key="album.id">
@@ -45,6 +45,6 @@
     list-style: none
 
     li 
-      width: 100%
+      width: 80%
 
 </style>

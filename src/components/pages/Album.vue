@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container>
+    <b-container v-if="currentAlbum">
       <b-row class="main-area">
         <b-col cols="6">
           <img :src="currentAlbum.img_url">
@@ -132,6 +132,11 @@ export default {
         a
           margin-left: 20px
 
+      th, td 
+        border: 0
+        margin-left: 0
+        padding-left: 0
+
     .rate
       background-color: #000
       outline: none !important
@@ -139,14 +144,6 @@ export default {
       padding: 0 
       margin-top: -4px
       margin-left: -4px
-
-          
-
-    th, td 
-      border: 0
-      margin-left: 0
-      padding-left: 0
-
 
   .songs-area
 
@@ -163,7 +160,6 @@ export default {
       background-color: rgba(255, 255, 250, 0.1)
       border-radius: 5px
       padding-left: 5px
-
 
   .image-enter 
     opacity: 0

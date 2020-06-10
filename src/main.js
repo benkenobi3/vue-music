@@ -1,20 +1,22 @@
 import Vue from 'vue'
 import App from './App.vue'
-import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue' 
-import {BFormRating} from 'bootstrap-vue'
+import Axios from 'axios'
+import store from './store'
+import router from './components/elements/router'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+
+import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
+
+import {BFormRating} from 'bootstrap-vue'
 Vue.component('b-form-rating', BFormRating)
 
-import store from './store'
-import router from './components/elements/router'
 
-import Axios from 'axios'
 Vue.prototype.$http = Axios
 
 const token = localStorage.getItem('token')

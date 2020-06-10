@@ -40,6 +40,12 @@ const routes = [
       props: true
     },
     {
+      path: '/singer/:id',
+      name: 'Исполнитель',
+      component: Album,
+      props: true
+    },
+    {
       path: '/login',
       name: 'Авторизация',
       component: Login

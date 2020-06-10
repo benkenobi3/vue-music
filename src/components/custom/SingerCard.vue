@@ -1,29 +1,29 @@
 <template>
-    <div class="album-card">
-      <div class="album-image">
-        <img :src="album.img_url" alt="fail">
-        <router-link :to="{ name: 'Альбом', params: { id: album.id }}">
+    <div class="singer-card">
+      <div class="singer-image">
+        <img :src="singer.avatar_url" alt="fail">
+        <router-link :to="{ name: 'Исполнитель', params: { id: singer.id }}">
           <img src="../../assets/more.png" alt="" class="more">
         </router-link>
-      </div>
-      <h4> {{ album.name }} </h4>
-      <p> {{ album.singers[0].name }} • {{ album.type }} • {{ album.date.slice(0, 4) }}</p>
+      </div>      
+      <h4> {{ singer.name }} </h4>
     </div>
 </template>
 
 <script>
 export default {
-  props: ['album'],
+  props: ['singer'],
 }
 </script>
 
 <style lang="sass">
-  .album-card
+  .singer-card
     min-width: 27vh
     max-width: 27vh
     max-height: 35vh
     overflow: hidden
     white-space: nowrap
+    text-align: center
 
     h4 
       width: 100%
@@ -35,8 +35,9 @@ export default {
     p
       font-family: Gilroy
 
-  .album-image 
+  .singer-image 
     position: relative
+    
     
     img 
       display: block
@@ -45,7 +46,7 @@ export default {
       min-width: 27vh
       max-width: 27vh
       margin-bottom: 5px
-      border-radius: 5px
+      border-radius: 50%
 
     .more 
       width: 100%

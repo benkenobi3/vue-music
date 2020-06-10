@@ -60,7 +60,7 @@ export default {
 
     getters: {
         newRelease(state) {
-            return state.new_release.reverse()
+            return state.new_release
         },
         currentAlbum(state) {
             return state.album

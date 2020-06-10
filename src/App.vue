@@ -3,7 +3,7 @@
     <b-container fluid>
       <b-navbar toggleable="lg" class="navbar" fixed="top">
         
-        <b-navbar-brand href="#" router-component-name="Main" to="/">
+        <b-navbar-brand to="/">
           <img src="./assets/zik.png" alt="logo" style="width: 60px; height: 56px;" class="ml-3">
         </b-navbar-brand>
 

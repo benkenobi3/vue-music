@@ -13,7 +13,7 @@
                 <tbody>
                   <tr>
                     <td><span class="info-line">Исполнитель</span></td>
-                    <td><b-link v-if="currentAlbum.singers">
+                    <td><b-link v-if="currentAlbum.singers" :to="{ name: 'Исполнитель', params: { id: currentAlbum.singers[0].id }}">
                         {{currentAlbum.singers[0].name}}
                       </b-link> </td>
                   </tr>

@@ -3,7 +3,7 @@
     <b-container fluid>
       <b-row class="singer-poster">
         <b-col cols="12" class="padding-free">
-          <img :src=currentSinger.poster_url alt="back">
+          <b-img :src=currentSinger.poster_url fluid alt="back"></b-img>
         </b-col>
       </b-row>
       <b-row>
@@ -45,9 +45,6 @@ export default {
     height: 70vh
     width: 100vw
     overflow: hidden
-
-    img
-      width: 100vw
 
   .singer-h1
     font-family: Gilroy

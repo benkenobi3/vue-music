@@ -2,10 +2,11 @@
   <div>
     <b-container v-if="currentAlbum">
       <b-row class="main-area">
-        <b-col cols="6">
-          <img :src="currentAlbum.img_url">
+        <b-col xl="6">
+          <b-img :src="currentAlbum.img_url">
+          </b-img>
         </b-col>
-        <b-col cols="6">
+        <b-col xl="6">
           <div>
             <h1> {{currentAlbum.name}} </h1>
             <div class="info">
@@ -25,6 +26,10 @@
                   <tr>
                     <td><span class="info-line">Дата выхода</span></td>
                     <td><b-link>{{currentAlbum.date}}</b-link></td>
+                  </tr>
+                  <tr>
+                    <td><span class="info-line">Количество треков</span></td>
+                    <td><b-link>{{currentAlbum.songs.length}}</b-link></td>
                   </tr>
                   <tr>
                     <td><span class="info-line">Длительность</span></td>
@@ -115,10 +120,10 @@ export default {
 
     img 
       display: block
-      min-width: 500px
-      max-height: 500px
-      min-width: 500px
-      max-width: 500px
+      min-width: 30em
+      max-height: 30em
+      min-width: 30em
+      max-width: 30em
       margin-bottom: 5px
       border-radius: 5px
     
